@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# تحديث قائمة الحزم
+sudo apt update
+
+# تحديث جميع الحزم إلى أحدث إصدار
+sudo apt list --upgradable | grep -v Listing | cut -d '/' -f1 | xargs sudo apt install -y
+
+# تثبيت Composer
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# تحديث Composer
+composer self-update
+
+# تحديث الحزم المثبتة باستخدام Composer
+composer global require sunra/php-simple-html-dom-parser mlocati/php-intl-extra telegram-bot/api
