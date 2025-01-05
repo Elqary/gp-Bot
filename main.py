@@ -60,7 +60,7 @@ def arabic_numerals(text):
     return text
 
 def update_group_info():
-    chat_id = '-4136537724'
+    chat_id = '-1002392074660'
     now, hijri_date, tz = get_current_time()
     current_time = now.strftime("%I:%M %p")
     current_time_arabic = arabic_am_pm(current_time)
@@ -113,7 +113,7 @@ def update_group_info():
                 f"🌈╽اليوم⇜ {arabic_day_names[day_name]} ؛"
     
     # تحديث اسم المجموعة والوصف
-    bot.set_chat_title(chat_id, group_name)
+    #bot.set_chat_title(chat_id, group_name)
     bot.set_chat_description(chat_id, new_about)
 
 # استدعاء الدالة للتأكد من تحديث المعلومات في البداية
